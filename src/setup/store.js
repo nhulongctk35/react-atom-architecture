@@ -3,13 +3,13 @@ import thunk from 'redux-thunk';
 import { Map } from 'immutable';
 
 /* eslint-disable no-underscore-dangle */
-const composeEnhancers = (!Config.PRODUCTION && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ?
+const composeEnhancers = (!process.env && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ?
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ :
   compose;
 /* eslint-enable */
 
 const configureStore = (reducer) => {
-  const initialState = Ma();
+  const initialState = Map();
   const middlewares = [thunk];
   const enhancers = [applyMiddleware(...middlewares)];
 

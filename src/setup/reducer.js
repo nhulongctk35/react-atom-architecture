@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux-immutable';
 
 const reducers = {
+  null: function() { return {}}
 };
 
 function createReducer() {
