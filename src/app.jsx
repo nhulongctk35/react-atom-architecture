@@ -32,7 +32,5 @@ function render() {
 render();
 
 if (module.hot) {
-  module.hot.accept('./routes', () => {
-    render(routes);
-  });
+  module.hot.accept();
 }
